@@ -1,2 +1,11 @@
 dev_fetch_&_clean.py
 .venv/
+lol_stats_dev.csv
+
+
+
+__pycache__/
+.ipynb_checkpoints
+.vscode/
+.env
+.DS_Store
