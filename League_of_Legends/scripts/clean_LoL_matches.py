@@ -3,7 +3,7 @@ import pandas as pd
 # load raw data / charger les données brutes
 raw_csv_path = "League_of_Legends/data/raw/"
 cleaned_csv_path = "League_of_Legends/data/processed/"
-df = pd.read_csv(raw_csv_path + "____.csv") # <-- fill the blank with your raw csv file name / remplir le blanc avec le nom de votre fichier csv brut
+df = pd.read_csv(raw_csv_path + "_____.csv") # <-- fill the blank with your raw csv file name / remplir le blanc avec le nom de votre fichier csv brut
 
 # delete unnecessary columns / supprimer les colonnes inutiles
 df = df.drop(columns=["matchId", "queueId"], errors="ignore")
@@ -18,7 +18,9 @@ df["gold"] = df["gold"].astype(int)
 
 # Add useful metrics / ajouter des métriques utiles
 df["KDA"] = (df["kills"] + df["assists"]) / df["deaths"].replace(0, 1)
+df["KDA"] = df["KDA"].astype(float)
 df["CS_per_min"] = df["cs"] / (df["timePlayed"] / 60)
+df["CS_per_min"] = df["CS_per_min"].astype(float)
 
 # save cleaned data / sauvegarder les données nettoyées
 df.to_csv(cleaned_csv_path + "matches_clean.csv", index=False)
