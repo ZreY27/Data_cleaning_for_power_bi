@@ -38,7 +38,7 @@ Ce projet illustre des compétences en **nettoyage et prétraitement de données
 
 ---
 
-## Climate Data – CO2 Emissions / Données Climat – Émissions de CO2
+## Climate Data – CO2 Emissions / Données Climat – Émissions de CO2 (EN COURS...)
 
 **(EN)**  
 - Load multi-source climate and CO2 datasets  
